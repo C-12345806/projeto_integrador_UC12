@@ -1,0 +1,162 @@
+/* Configurações gerais da página */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #240078;
+}
+
+/* Imagem de fundo e camada roxa */
+.tela-inicial {
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    background-image:
+        linear-gradient(rgba(36, 0, 112, 0.25), rgba(36, 0, 112, 0.28)),
+        url("../imagens/fundo.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Conteúdo principal */
+.conteudo {
+    width: 100%;
+    max-width: 430px;
+    min-height: 100vh;
+    padding: 65px 20px 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+
+/* Logo e nome do aplicativo */
+.cabecalho {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo {
+    width: 105px;
+    height: 105px;
+    object-fit: contain;
+    margin-bottom: 2px;
+}
+
+h1 {
+    color: white;
+    font-size: 34px;
+    font-weight: 800;
+    font-style: italic;
+    line-height: 1;
+    text-shadow: 0 2px 5px rgba(25, 0, 70, 0.35);
+}
+
+.slogan {
+    color: #eee1ff;
+    font-size: 16px;
+    font-weight: bold;
+    font-style: italic;
+    line-height: 1.1;
+    margin-top: 5px;
+    text-shadow: 0 1px 4px rgba(25, 0, 70, 0.4);
+}
+
+/* Texto localizado na parte inferior da imagem */
+.mensagem {
+    margin-top: auto;
+    margin-bottom: 28px;
+    color: white;
+    font-size: 13px;
+    font-weight: bold;
+    font-style: italic;
+    line-height: 1.2;
+    text-shadow: 0 2px 5px rgba(25, 0, 70, 0.75);
+}
+
+/* Botão Começar */
+button {
+    width: 220px;
+    max-width: 80%;
+    border: none;
+    border-radius: 30px;
+    padding: 13px 20px;
+    background: #a62df0;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    font-style: italic;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(25, 0, 70, 0.4);
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+button:hover {
+    background-color: #b94cff;
+    transform: scale(1.04);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* Ajustes para telas menores */
+@media (max-width: 480px) {
+    .conteudo {
+        padding-top: 65px;
+        padding-bottom: 30px;
+    }
+
+    .logo {
+        width: 90px;
+        height: 90px;
+    }
+
+    h1 {
+        font-size: 31px;
+    }
+
+    .slogan {
+        font-size: 14px;
+    }
+
+    .mensagem {
+        font-size: 11px;
+        margin-bottom: 25px;
+    }
+
+    button {
+        width: 148px;
+        padding: 10px 15px;
+        font-size: 13px;
+    }
+}
+
+/* Em telas baixas, reduz os espaços para não cortar o botão */
+@media (max-height: 620px) {
+    .conteudo {
+        padding-top: 25px;
+        padding-bottom: 20px;
+    }
+
+    .logo {
+        width: 75px;
+        height: 75px;
+    }
+
+    .mensagem {
+        margin-bottom: 15px;
+    }
+}
