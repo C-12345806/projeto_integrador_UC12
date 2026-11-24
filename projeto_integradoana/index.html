@@ -1,0 +1,155 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ParkTime</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<main class="pagina-login">
+    <section class="conteudo">
+
+        <!-- LOGIN -->
+        <div id="telaLogin">
+            <header class="cabecalho">
+                <h1>Bem-vindo!</h1>
+                <p>Entre na sua conta pra continuar</p>
+            </header>
+
+            <form class="formulario" id="formLogin">
+
+                  <div class="campo">
+                    <label for="Nome">nome</label>
+                    <div class="entrada">
+                        <span class="icone">👤</span>
+                        <input type="Nome" id="Nome "
+                            placeholder="Digite seu nome completo" required>
+                    </div>
+                </div>
+
+                  <div class="campo">
+                    <label for="email">E-mail</label>
+                    <div class="entrada">
+                        <span class="icone">✉</span>
+                        <input type="email" id="email"
+                            placeholder="Digite seu e-mail" required>
+                    </div>
+                </div>
+
+                <div class="campo">
+                    <label for="Senha">Senha/label>
+                    <div class="entrada">
+                        <span class="icone">▣</span>
+                        <input type="Senha" id="Senha"
+                            placeholder="Digite uma senha com + de 8 caracteres " required>
+                             <button type="button" class="mostrar-senha"
+                            onclick="mostrar('senha')">◉</button>
+                    </div>
+                </div>
+
+                <div class="campo">
+                    <label for="senha">Senha</label>
+                    <div class="entrada">
+                        <span class="icone">▣</span>
+                        <input type="password" id="senha"
+                            placeholder="confirme sua senha " required>
+                        <button type="button" class="mostrar-senha"
+                            onclick="mostrar('senha')">◉</button>
+                    </div>
+                </div>
+
+                <a class="esqueci-senha" href="#" id="linkEsqueci">
+                    Esqueci minha senha
+                </a>
+
+                <button class="botao-entrar" type="submit">Entrar</button>
+
+                <p class="separador">ou</p>
+
+                <div class="cadastro">
+                    <p>Ainda não tem conta?</p>
+                    <a href="#" id="linkCadastro">Cadastre-se</a>
+                </div>
+            </form>
+        </div>
+
+        <!-- CADASTRO -->
+        <div id="telaCadastro" hidden>
+
+            <header class="cabecalho">
+                <h1>Bem-vindo(a)!</h1>
+                <p>Cadastre-se para continuar</p>
+            </header>
+
+            <form class="formulario" id="formCadastro">
+
+                <div class="campo">
+                    <label for="nome">Nome:</label>
+                    <div class="entrada">
+                        <span class="icone">♙</span>
+                        <input type="text" id="nome"
+                            placeholder="Digite seu nome completo" required>
+                    </div>
+                </div>
+
+                <div class="campo">
+                    <label for="emailCadastro">Email</label>
+                    <div class="entrada">
+                        <span class="icone">✉</span>
+                        <input type="email" id="emailCadastro"
+                            placeholder="Digite seu Email" required>
+                    </div>
+                </div>
+
+                <div class="campo">
+                    <label for="senhaCadastro">Senha:</label>
+                    <div class="entrada">
+                        <span class="icone">▣</span>
+                        <input type="password" id="senhaCadastro"
+                            placeholder="Digite uma senha com + de 8 caracteres"
+                            minlength="8" required>
+                        <button type="button" class="mostrar-senha"
+                            onclick="mostrar('senhaCadastro')">◉</button>
+                    </div>
+                </div>
+
+                <div class="campo">
+                    <label for="confirmarSenha">Confirme sua senha:</label>
+                    <div class="entrada">
+                        <span class="icone">▣</span>
+                        <input type="password" id="confirmarSenha"
+                            placeholder="Confirme sua senha"
+                            minlength="8" required>
+                        <button type="button" class="mostrar-senha"
+                            onclick="mostrar('confirmarSenha')">◉</button>
+                    </div>
+                </div>
+
+                <div class="termos">
+                    <input type="checkbox" id="aceitarTermos" required>
+                    <label for="aceitarTermos">
+                        Aceito os <a href="#">Termos de uso</a>
+                        e <a href="#">política de privacidade</a>.
+                    </label>
+                </div>
+
+                <button class="botao-entrar" type="submit">
+                    Criar conta
+                </button>
+
+                <div class="cadastro">
+                    <p>Já tem conta? <a href="#" id="linkLogin">Entre</a></p>
+                </div>
+
+            </form>
+        </div>
+
+    </section>
+</main>
+
+<script src="js/script.js"></script>
+</body>
+</html>
