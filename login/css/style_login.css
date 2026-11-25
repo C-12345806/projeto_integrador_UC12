@@ -1,0 +1,310 @@
+/* Configurações gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    min-height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #321080;
+}
+
+img {
+    background-color: #ffffff;
+}
+
+/* Fundo do parque */
+.pagina-login {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    background-image:
+        linear-gradient(rgba(35, 10, 100, 0.18), rgba(35, 10, 100, 0.18)),
+        url("../imagens/fundo-login.png");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+/* Conteúdo principal */
+.conteudo {
+    width: 100%;
+    max-width: 1200px;
+    min-height: 100vh;
+    padding: clamp(28px, 5vh, 55px) clamp(18px, 5vw, 65px);
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    text-align: left;
+}
+
+/* Título */
+.cabecalho {
+    color: white;
+    text-align: center;
+}
+
+.cabecalho h1 {
+    font-size: clamp(25px, 3vw, 38px);
+    font-style: italic;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.cabecalho p {
+    font-size: clamp(11px, 1.2vw, 15px);
+}
+
+/* Formulário */
+.formulario {
+    width: 100%;
+    max-width: 410px;
+    margin: clamp(55px, 11vh, 105px) auto 0;
+    text-align: left;
+    padding: 22px 20px 25px;
+    background: rgba(255, 255, 255, 0.76);
+    border-radius: 12px;
+    color: #171020;
+    box-shadow: 0 5px 18px rgba(25, 0, 70, 0.18);
+}
+
+.campo {
+    margin-bottom: 20px;
+}
+
+.campo label {
+    display: block;
+    font-size: 12px;
+    margin: 0 0 7px 2px;
+}
+
+.entrada {
+    min-height: 42px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0 12px;
+    background: white;
+    border-radius: 24px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+}
+
+.icone {
+    font-size: 17px;
+    color: #171020;
+    line-height: 1;
+}
+
+.entrada input {
+    width: 100%;
+    min-width: 0;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 12px;
+    color: #222;
+}
+
+.entrada input::placeholder {
+    color: #888;
+}
+
+.mostrar-senha {
+    border: none;
+    background: transparent;
+    color: #171020;
+    font-size: 17px;
+    cursor: pointer;
+    padding: 3px;
+}
+
+.esqueci-senha {
+    display: block;
+    text-align: right;
+    margin-top: -10px;
+    margin-bottom: 22px;
+    color: #6500c8;
+    font-size: 11px;
+    text-decoration: none;
+}
+
+.botao-entrar {
+    display: block;
+    width: 78%;
+    min-height: 40px;
+    margin: 0 auto;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 24px;
+    background: #a52cf0;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.botao-entrar:hover {
+    background: #8e1bd8;
+    transform: scale(1.02);
+}
+
+.separador {
+    margin: 22px 0;
+    text-align: center;
+    font-size: 12px;
+}
+
+.cadastro {
+    width: 72%;
+    margin: 0 auto;
+    padding: 16px 8px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.68);
+    border-radius: 14px;
+    box-shadow: 0 3px 7px rgba(40, 0, 70, 0.15);
+}
+
+.cadastro p {
+    font-size: 11px;
+    margin-bottom: 9px;
+}
+
+.cadastro a {
+    color: #6500c8;
+    font-size: 11px;
+    text-decoration: none;
+}
+
+.esqueci-senha:hover,
+.cadastro a:hover {
+    text-decoration: underline;
+}
+
+/* Celulares: mantém o formulário compacto e ocupa a largura disponível */
+@media (max-width: 600px) {
+    .pagina-login {
+        background-position: center center;
+    }
+
+    .conteudo {
+        max-width: 430px;
+        padding: 7vh 16px 28px;
+    }
+
+    .cabecalho h1 {
+        font-size: clamp(22px, 6vw, 27px);
+    }
+
+    .cabecalho p {
+        font-size: 10px;
+    }
+
+    .formulario {
+        max-width: none;
+        margin-top: clamp(55px, 11vh, 75px);
+        padding: 12px 9px 20px;
+        border-radius: 8px;
+    }
+
+    .campo {
+        margin-bottom: 16px;
+    }
+
+    .campo label {
+        font-size: 9px;
+        margin-bottom: 5px;
+    }
+
+    .entrada {
+        min-height: 32px;
+        gap: 5px;
+        padding: 0 8px;
+    }
+
+    .icone,
+    .mostrar-senha {
+        font-size: 14px;
+    }
+
+    .entrada input {
+        font-size: 9px;
+    }
+
+    .esqueci-senha {
+        font-size: 8px;
+        margin-bottom: 17px;
+    }
+
+    .botao-entrar {
+        min-height: 30px;
+        font-size: 13px;
+        padding: 5px 12px;
+    }
+
+    .separador {
+        margin: 17px 0;
+        font-size: 9px;
+    }
+
+    .cadastro {
+        padding: 12px 6px;
+    }
+
+    .cadastro p,
+    .cadastro a {
+        font-size: 8px;
+    }
+}
+
+/* Desktop: posiciona o formulário à esquerda e deixa o cenário aparecer */
+@media (min-width: 900px) {
+    .pagina-login {
+        justify-content: center;
+        background-position: center 55%;
+    }
+
+    .conteudo {
+        margin: 0 auto;
+        padding-top: 7vh;
+        align-items: stretch;
+        text-align: left;
+    }
+
+    .cabecalho {
+        text-align: center;
+    }
+
+    .formulario {
+        margin: clamp(70px, 13vh, 145px) auto 0;
+        text-align: left;
+    }
+}
+
+/* Telas baixas: evita que o formulário fique cortado */
+@media (max-height: 650px) {
+    .conteudo {
+        padding-top: 22px;
+        padding-bottom: 20px;
+    }
+
+    .formulario {
+        margin-top: 35px;
+    }
+
+    .campo {
+        margin-bottom: 12px;
+    }
+
+    .separador {
+        margin: 12px 0;
+    }
+}

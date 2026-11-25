@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrar - ParkTime</title>
+    <link rel="stylesheet" href="css/style_login.css">
+</head>
+<body>
+    <a href = "index_inicio.html"></a>
+    <main class="pagina-login">
+        <section class="conteudo">
+            <header class="cabecalho">
+                <h1>Bem-vindo!</h1>
+                <p>Entre na sua conta pra continuar</p>
+            </header>
+
+            <form class="formulario" id="formLogin">
+                <div class="campo">
+                    <label for="email">E-mail</label>
+                    <div class="entrada">
+                        <input type="email" id="email" placeholder="Digite seu e-mail" required>
+                    </div>
+                </div>
+
+                <div class="campo">
+                    <label for="senha">Senha</label>
+                    <div class="entrada">
+                        <input type="password" id="senha" placeholder="Digite sua senha" required>
+                        <button class="mostrar-senha" id="mostrarSenha" type="button" aria-label="Mostrar senha">◉</button>
+                    </div>
+                </div>
+
+                <a class="esqueci-senha" href="#" id="linkEsqueci">Esqueci minha senha</a>
+                <button class="botao-entrar" type="submit">Entrar</button>
+                <p class="separador">ou</p>
+
+                <div class="cadastro">
+                    <p>Ainda não tem conta?</p>
+                    <a href="#" id="linkCadastro">Cadastre-se</a>
+                </div>
+            </form>
+        </section>
+    </main>
+    <script src="js/script_login.js"></script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ParkTime - Início</title>
+
+    <link rel="stylesheet" href="css/style_comeco.css">
+
+    <!-- Ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Fonte -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Cabeçalho -->
+        <header>
+
+            <div class="saudacao">
+                <h2>Olá, ******!</h2>
+                <p>Pronto para viver grandes<br>aventuras?</p>
+            </div>
+
+            <i class="fa-regular fa-bell sino"></i>
+
+        </header>
+
+        <!-- Pesquisa -->
+        <div class="pesquisa">
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <input type="text" id="buscar" placeholder="Buscar atração...">
+
+        </div>
+
+        <!-- Banner -->
+        <section class="banner">
+
+            <img src="img/montanha.png" alt="Montanha-russa">
+
+            <div class="texto-banner">
+                <h3>Agende seu horário<br>e evite filas!</h3>
+            </div>
+
+            <button class="botao-banner" id="btnBanner">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+
+        </section>
+
+        <!-- Menu principal -->
+        <main>
+
+            <div class="menu">
+
+                <a href="atracoes.html" class="card" data-nome="atrações">
+                    <i class="fa-solid fa-ferris-wheel"></i>
+                    <p>Atrações</p>
+                </a>
+
+                <a href="agendamento.html" class="card" data-nome="meu agendamento">
+                    <i class="fa-regular fa-calendar-days"></i>
+                    <p>Meu<br>Agendamento</p>
+                </a>
+
+                <a href="mapa.html" class="card" data-nome="mapa do parque">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p>Mapa do Parque</p>
+                </a>
+
+                <a href="informacao.html" class="card" data-nome="informação">
+                    <i class="fa-solid fa-circle-info"></i>
+                    <p>Informação</p>
+                </a>
+
+            </div>
+
+            <p id="mensagem" class="mensagem"></p>
+
+        </main>
+
+        <!-- Navegação inferior -->
+        <nav class="menu-inferior">
+
+            <a href="index.html" class="ativo">
+                <i class="fa-solid fa-house"></i>
+                <span>Início</span>
+            </a>
+
+            <a href="perfil.html">
+                <i class="fa-regular fa-user"></i>
+                <span>Perfil</span>
+            </a>
+
+        </nav>
+
+    </div>
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>
