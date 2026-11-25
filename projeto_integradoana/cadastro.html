@@ -1,0 +1,134 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Criar conta</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <main class="page">
+
+        <section class="signup">
+
+            <header class="heading">
+                <h1>Criar conta</h1>
+                <p>Preencha seus dados pra começar</p>
+            </header>
+
+            <form class="form-card" id="signupForm">
+
+                <!-- Nome -->
+                <div class="field">
+                    <label for="name">Nome</label>
+
+                    <div class="input-wrap">
+                        <span class="icon">♙</span>
+
+                        <input
+                            type="text"
+                            id="name"
+                            placeholder="Digite seu nome"
+                        >
+                    </div>
+
+                    <small id="nameError" class="error"></small>
+                </div>
+
+                <!-- E-mail -->
+                <div class="field">
+                    <label for="email">E-mail</label>
+
+                    <div class="input-wrap">
+                        <span class="icon">✉</span>
+
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder="Digite seu e-mail"
+                        >
+                    </div>
+
+                    <small id="emailError" class="error"></small>
+                </div>
+
+                <!-- Senha -->
+                <div class="field">
+                    <label for="password">Senha</label>
+
+                    <div class="input-wrap">
+                        <span class="icon">♙</span>
+
+                        <input
+                            type="password"
+                            id="password"
+                            placeholder="Crie sua senha"
+                        >
+
+                        <button
+                            type="button"
+                            class="toggle-password"
+                            data-target="password"
+                        >◉</button>
+                    </div>
+
+                    <small id="passwordError" class="error"></small>
+                </div>
+
+                <!-- Confirmar senha -->
+                <div class="field">
+                    <label for="confirmPassword">
+                        Confirmar senha
+                    </label>
+
+                    <div class="input-wrap">
+                        <span class="icon">♙</span>
+
+                        <input
+                            type="password"
+                            id="confirmPassword"
+                            placeholder="Confirme sua senha"
+                        >
+
+                        <button
+                            type="button"
+                            class="toggle-password"
+                            data-target="confirmPassword"
+                        >◉</button>
+                    </div>
+
+                    <small id="confirmError" class="error"></small>
+                </div>
+
+                <!-- Botão -->
+                <button type="submit" class="submit-btn">
+                    Cadastrar
+                </button>
+
+                <!-- Login -->
+                <div class="login-box">
+                    <p>Já possui uma conta?</p>
+
+                    <a href="#" id="loginLink">
+                        Clique aqui!
+                    </a>
+                </div>
+
+                <p id="successMessage" class="success-message"></p>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>

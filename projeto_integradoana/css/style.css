@@ -1,5 +1,338 @@
 
-/* Configurações gerais */
+/* CONFIGURAÇÕES GERAIS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    background: #9d43f1;
+}
+
+/* FUNDO COM IMAGEM */
+
+.page {
+    min-height: 100vh;
+    min-height: 100svh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 25px;
+
+    background-image:
+        linear-gradient(
+            rgba(44, 26, 105, 0.25),
+            rgba(44, 26, 105, 0.25)
+        ),
+        url("img/parque.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* CONTAINER PRINCIPAL */
+
+.signup {
+    width: 100%;
+    max-width: 460px;
+    min-height: 780px;
+
+    padding: 48px 30px 28px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 24px;
+
+    background: linear-gradient(
+        180deg,
+        rgba(47, 42, 119, 0.92),
+        rgba(69, 43, 139, 0.78),
+        rgba(83, 48, 151, 0.58)
+    );
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+/* TÍTULO */
+
+.heading {
+    color: white;
+}
+
+.heading h1 {
+    font-size: 2.4rem;
+    font-weight: 800;
+    font-style: italic;
+    margin-bottom: 4px;
+}
+
+.heading p {
+    font-size: 14px;
+}
+
+/* FORMULÁRIO */
+
+.form-card {
+    width: 100%;
+
+    padding: 16px 12px 20px;
+
+    border-radius: 12px;
+
+    background: rgba(245, 240, 255, 0.80);
+
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.3);
+
+    backdrop-filter: blur(5px);
+}
+
+/* CAMPOS */
+
+.field {
+    margin-bottom: 17px;
+}
+
+.field label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+}
+
+/* INPUTS */
+
+.input-wrap {
+    min-height: 42px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+    padding: 0 11px;
+
+    background: white;
+    border-radius: 25px;
+
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.3);
+
+    border: 1px solid transparent;
+}
+
+.input-wrap:focus-within {
+    border-color: #a13df4;
+}
+
+.icon {
+    font-size: 21px;
+    width: 20px;
+    text-align: center;
+}
+
+.input-wrap input {
+    width: 100%;
+    min-width: 0;
+    height: 40px;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    font-size: 14px;
+}
+
+.input-wrap input::placeholder {
+    color: #858585;
+}
+
+/* BOTÃO DE MOSTRAR SENHA */
+
+.toggle-password {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 19px;
+}
+
+/* MENSAGENS DE ERRO */
+
+.error {
+    display: block;
+    color: #a00035;
+    font-size: 12px;
+    padding: 0 10px;
+}
+
+.error:not(:empty) {
+    margin-top: 5px;
+}
+
+/* BOTÃO CADASTRAR */
+
+.submit-btn {
+    display: block;
+
+    width: 78%;
+    min-height: 44px;
+
+    margin: 25px auto;
+
+    border: none;
+    border-radius: 25px;
+
+    background: #a13df4;
+    color: white;
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+
+    transition: 0.3s;
+}
+
+.submit-btn:hover {
+    background: #8c20e0;
+    transform: translateY(-2px);
+}
+
+/* CAIXA DE LOGIN */
+
+.login-box {
+    width: 78%;
+
+    margin: auto;
+
+    padding: 14px 8px 17px;
+
+    text-align: center;
+
+    border-radius: 23px;
+
+    background: rgba(250, 239, 255, 0.95);
+
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+
+    font-size: 14px;
+}
+
+.login-box p {
+    margin-bottom: 8px;
+}
+
+.login-box a {
+    color: #8500e8;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login-box a:hover {
+    text-decoration: underline;
+}
+
+/* MENSAGEM DE SUCESSO */
+
+.success-message {
+    color: #145c28;
+    text-align: center;
+    font-weight: bold;
+    font-size: 13px;
+    margin-top: 12px;
+}
+
+/* RESPONSIVIDADE - CELULAR */
+
+@media (max-width: 600px) {
+
+    .page {
+        padding: 0;
+        align-items: stretch;
+    }
+
+    .signup {
+        width: 100%;
+        max-width: none;
+
+        min-height: 100vh;
+        min-height: 100svh;
+
+        padding: 35px 20px;
+
+        justify-content: center;
+
+        gap: 35px;
+    }
+
+    .heading h1 {
+        font-size: 2rem;
+    }
+
+    .form-card {
+        padding: 16px 12px 20px;
+    }
+
+    .field {
+        margin-bottom: 15px;
+    }
+
+    .submit-btn {
+        width: 85%;
+    }
+
+    .login-box {
+        width: 85%;
+    }
+}
+
+/* CELULARES PEQUENOS */
+
+@media (max-width: 380px) {
+
+    .signup {
+        padding: 22px 15px;
+        gap: 20px;
+    }
+
+    .heading h1 {
+        font-size: 1.8rem;
+    }
+
+    .field {
+        margin-bottom: 10px;
+    }
+
+    .submit-btn {
+        margin: 18px auto;
+    }
+}
+
+/* DESKTOP */
+
+@media (min-width: 1000px) {
+
+    .page {
+        padding: 40px;
+        background-position: center;
+    }
+
+    .signup {
+        max-width: 460px;
+    }
+}
+
+
+
+
+/* CSS ATRAÇOES */
+
 * {
     margin: 0;
     padding: 0;
@@ -7,303 +340,376 @@
 }
 
 html, body {
+    width: 100%;
     min-height: 100%;
 }
 
 body {
-    min-height: 100vh;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #321080;
+    background: #fff;
+    color: #111;
 }
 
-/* Fundo do parque */
-.pagina-login {
-    min-height: 100vh;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    position: relative;
-    overflow: hidden;
-    background-image:
-        linear-gradient(rgba(35, 10, 100, 0.18), rgba(35, 10, 100, 0.18)),
-        url("../img/parque.png");
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-}
+/* PÁGINA OCUPANDO A TELA TODA */
 
-/* Conteúdo principal */
-.conteudo {
+.app {
     width: 100%;
-    max-width: 1200px;
     min-height: 100vh;
-    padding: clamp(28px, 5vh, 55px) clamp(18px, 5vw, 65px);
+    min-height: 100svh;
+
     display: flex;
     flex-direction: column;
-    align-items: stretch;
-    text-align: left;
+
+    background: white;
 }
 
-/* Título */
-.cabecalho {
-    color: white;
-    text-align: center;
-}
+/* CONTEÚDO */
 
-.cabecalho h1 {
-    font-size: clamp(25px, 3vw, 38px);
-    font-style: italic;
-    font-weight: bold;
-    margin-bottom: 4px;
-}
-
-.cabecalho p {
-    font-size: clamp(11px, 1.2vw, 15px);
-}
-
-/* Formulário */
-.formulario {
+.content {
+    flex: 1;
     width: 100%;
-    max-width: 410px;
-    margin: clamp(55px, 11vh, 105px) auto 0;
-    text-align: left;
-    padding: 22px 20px 25px;
-    background: rgba(255, 255, 255, 0.76);
-    border-radius: 12px;
-    color: #171020;
-    box-shadow: 0 5px 18px rgba(25, 0, 70, 0.18);
+    padding: 65px 7% 50px;
 }
 
-.campo {
-    margin-bottom: 20px;
+/* TÍTULO */
+
+.header {
+    margin-bottom: 25px;
 }
 
-.campo label {
-    display: block;
-    font-size: 12px;
-    margin: 0 0 7px 2px;
+.header h1 {
+    font-size: 38px;
+    font-weight: 800;
+    font-style: italic;
 }
 
-.entrada {
-    min-height: 42px;
+/* FILTROS */
+
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-bottom: 25px;
+}
+
+.filter {
+    border: none;
+    border-radius: 7px;
+    padding: 6px 20px;
+
+    background: #d5aaff;
+    color: #111;
+
+    font-size: 14px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.filter:hover {
+    background: #bd83ff;
+}
+
+.filter.active {
+    background: #a13df4;
+    color: white;
+}
+
+/* LISTA DE ATRAÇÕES */
+
+.attractions {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px;
+    width: 100%;
+}
+
+/* CARTÕES */
+
+.attraction-card {
+    width: 100%;
+    min-height: 203px;
+
     display: flex;
     align-items: center;
-    gap: 8px;
-    padding: 0 12px;
+    gap: 20px;
+
+    padding: 60px 50px;
+
     background: white;
-    border-radius: 24px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 18px;
+
+    box-shadow: 0 7px 18px rgba(0, 0, 0, .18);
+
+    transition: .3s;
 }
 
-.icone {
-    font-size: 17px;
-    color: #171020;
-    line-height: 1;
+.attraction-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 22px rgba(0, 0, 0, .2);
 }
 
-.entrada input {
-    width: 100%;
+/* IMAGENS */
+
+.attraction-image {
+    width: 211px;
+    height: 142px;
+
+    object-fit: cover;
+    border-radius: 12px;
+    flex-shrink: 0;
+}
+
+/* INFORMAÇÕES */
+
+.attraction-info {
+    flex: 1;
     min-width: 0;
-    border: none;
-    outline: none;
-    background: transparent;
-    font-size: 12px;
-    color: #222;
+    text-align: center;
 }
 
-.entrada input::placeholder {
-    color: #888;
-}
-
-.mostrar-senha {
-    border: none;
-    background: transparent;
-    color: #171020;
-    font-size: 17px;
-    cursor: pointer;
-    padding: 3px;
-}
-
-.esqueci-senha {
-    display: block;
-    text-align: right;
-    margin-top: -10px;
-    margin-bottom: 22px;
-    color: #6500c8;
-    font-size: 11px;
-    text-decoration: none;
-}
-
-.botao-entrar {
-    display: block;
-    width: 78%;
-    min-height: 40px;
-    margin: 0 auto;
-    padding: 8px 15px;
-    border: none;
-    border-radius: 24px;
-    background: #a52cf0;
-    color: white;
+.attraction-info h2 {
     font-size: 16px;
+    font-weight: 800;
+    font-style: italic;
+}
+
+.category {
+    color: #666;
+    font-size: 15px;
+    font-weight: bold;
+    font-style: italic;
+    margin: 3px 0 10px;
+}
+
+.duration {
+    display: inline-block;
+    min-width: 90px;
+    padding: 3px 12px;
+
+    border-radius: 6px;
+    background: #a13df4;
+
+    color: #111;
+    font-size: 13px;
+    font-style: italic;
+    font-weight: bold;
+}
+
+/* SETA */
+
+.details-btn {
+    border: none;
+    background: transparent;
+
+    font-size: 32px;
+    font-weight: bold;
+
     cursor: pointer;
-    transition: background 0.2s, transform 0.2s;
+    padding: 0 8px;
 }
 
-.botao-entrar:hover {
-    background: #8e1bd8;
-    transform: scale(1.02);
+.details-btn:hover {
+    color: #a13df4;
 }
 
-.separador {
-    margin: 22px 0;
+/* MENSAGEM VAZIA */
+
+.empty-message {
     text-align: center;
-    font-size: 12px;
+    margin-top: 30px;
+    color: #666;
 }
 
-.cadastro {
-    width: 72%;
-    margin: 0 auto;
-    padding: 16px 8px;
-    text-align: center;
-    background: rgba(255, 255, 255, 0.68);
-    border-radius: 14px;
-    box-shadow: 0 3px 7px rgba(40, 0, 70, 0.15);
+/* MENU INFERIOR */
+
+.bottom-menu {
+    width: 100%;
+    min-height: 95px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18%;
+
+    background: white;
+
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, .15);
+
+    position: sticky;
+    bottom: 0;
+    z-index: 10;
 }
 
-.cadastro p {
-    font-size: 11px;
-    margin-bottom: 9px;
-}
+.menu-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
 
-.cadastro a {
-    color: #6500c8;
-    font-size: 11px;
+    color: #777;
     text-decoration: none;
+
+    font-size: 14px;
+    font-style: italic;
+    transition: .2s;
 }
 
-.esqueci-senha:hover,
-.cadastro a:hover {
-    text-decoration: underline;
+.menu-item:hover {
+    color: #a13df4;
 }
 
-/* Celulares: mantém o formulário compacto e ocupa a largura disponível */
-@media (max-width: 600px) {
-    .pagina-login {
-        background-position: center center;
-    }
-
-    .conteudo {
-        max-width: 430px;
-        padding: 7vh 16px 28px;
-    }
-
-    .cabecalho h1 {
-        font-size: clamp(22px, 6vw, 27px);
-    }
-
-    .cabecalho p {
-        font-size: 10px;
-    }
-
-    .formulario {
-        max-width: none;
-        margin-top: clamp(55px, 11vh, 75px);
-        padding: 12px 9px 20px;
-        border-radius: 8px;
-    }
-
-    .campo {
-        margin-bottom: 16px;
-    }
-
-    .campo label {
-        font-size: 9px;
-        margin-bottom: 5px;
-    }
-
-    .entrada {
-        min-height: 32px;
-        gap: 5px;
-        padding: 0 8px;
-    }
-
-    .icone,
-    .mostrar-senha {
-        font-size: 14px;
-    }
-
-    .entrada input {
-        font-size: 9px;
-    }
-
-    .esqueci-senha {
-        font-size: 8px;
-        margin-bottom: 17px;
-    }
-
-    .botao-entrar {
-        min-height: 30px;
-        font-size: 13px;
-        padding: 5px 12px;
-    }
-
-    .separador {
-        margin: 17px 0;
-        font-size: 9px;
-    }
-
-    .cadastro {
-        padding: 12px 6px;
-    }
-
-    .cadastro p,
-    .cadastro a {
-        font-size: 8px;
-    }
+.menu-icon {
+    font-size: 38px;
+    line-height: 1.1;
 }
 
-/* Desktop: posiciona o formulário à esquerda e deixa o cenário aparecer */
-@media (min-width: 900px) {
-    .pagina-login {
-        justify-content: center;
-        background-position: center 55%;
+/* MODAL */
+
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+
+    z-index: 20;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+    background: rgba(0, 0, 0, .55);
+}
+
+.modal.show {
+    display: flex;
+}
+
+.modal-content {
+    position: relative;
+
+    width: 100%;
+    max-width: 420px;
+
+    padding: 35px 25px;
+
+    text-align: center;
+    border-radius: 20px;
+
+    background: white;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .2);
+}
+
+.modal-content h2 {
+    font-size: 23px;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.modal-content p {
+    color: #555;
+    line-height: 1.5;
+}
+
+.close-modal {
+    position: absolute;
+    top: 8px;
+    right: 15px;
+
+    border: none;
+    background: transparent;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.modal-button {
+    margin-top: 22px;
+    padding: 10px 35px;
+
+    border: none;
+    border-radius: 20px;
+
+    color: white;
+    background: #a13df4;
+    cursor: pointer;
+}
+
+/* TABLETS */
+
+@media (max-width: 850px) {
+
+    .content {
+        padding: 45px 5%;
     }
 
-    .conteudo {
-        margin: 0 auto;
-        padding-top: 7vh;
-        align-items: stretch;
-        text-align: left;
+    .attractions {
+        grid-template-columns: 1fr;
     }
 
-    .cabecalho {
-        text-align: center;
-    }
-
-    .formulario {
-        margin: clamp(70px, 13vh, 145px) auto 0;
-        text-align: left;
+    .attraction-card {
+        max-width: 100%;
     }
 }
 
-/* Telas baixas: evita que o formulário fique cortado */
-@media (max-height: 650px) {
-    .conteudo {
-        padding-top: 22px;
-        padding-bottom: 20px;
+/* CELULARES */
+
+@media (max-width: 500px) {
+
+    .content {
+        padding: 35px 16px;
     }
 
-    .formulario {
-        margin-top: 35px;
+    .header h1 {
+        font-size: 30px;
     }
 
-    .campo {
-        margin-bottom: 12px;
+    .filters {
+        gap: 8px;
+        justify-content: space-between;
     }
 
-    .separador {
-        margin: 12px 0;
+    .filter {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+
+    .attractions {
+        gap: 20px;
+    }
+
+    .attraction-card {
+        min-height: 95px;
+        gap: 9px;
+        padding: 9px;
+    }
+
+    .attraction-image {
+        width: 95px;
+        height: 70px;
+    }
+
+    .attraction-info h2 {
+        font-size: 12px;
+    }
+
+    .category {
+        font-size: 12px;
+        margin-bottom: 7px;
+    }
+
+    .duration {
+        min-width: 70px;
+        font-size: 11px;
+    }
+
+    .details-btn {
+        font-size: 25px;
+    }
+
+    .bottom-menu {
+        min-height: 80px;
+        gap: 15%;
+    }
+
+    .menu-icon {
+        font-size: 30px;
     }
 }
-Added to My Drive
-Displaying index.html.

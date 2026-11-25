@@ -1,0 +1,202 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Atrações</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <main class="app">
+
+        <section class="content">
+
+            <header class="header">
+                <h1>Atrações</h1>
+            </header>
+
+            <!-- FILTROS -->
+            <nav class="filters" aria-label="Filtrar atrações">
+
+                <button class="filter active" data-filter="todos">
+                    Todos
+                </button>
+
+                <button class="filter" data-filter="radical">
+                    Radicais
+                </button>
+
+                <button class="filter" data-filter="familiar">
+                    Familiares
+                </button>
+
+                <button class="filter" data-filter="infantil">
+                    Infantis
+                </button>
+
+            </nav>
+
+            <!-- LISTA DE ATRAÇÕES -->
+            <section class="attractions" id="attractions">
+
+                <article class="attraction-card"
+                    data-category="radical"
+                    data-name="Montanha Russa"
+                    data-description="Uma aventura cheia de velocidade, curvas e muita adrenalina!">
+
+                    <img src="img/montanha-russa.png"
+                        alt="Montanha russa"
+                        class="attraction-image">
+
+                    <div class="attraction-info">
+                        <h2>Montanha Russa</h2>
+                        <p class="category">Radical</p>
+
+                        <span class="duration">
+                            ◷ 20 min
+                        </span>
+                    </div>
+
+                    <button class="details-btn" aria-label="Ver detalhes da Montanha Russa">
+                        ›
+                    </button>
+
+                </article>
+
+
+                <article class="attraction-card"
+                    data-category="familiar"
+                    data-name="Roda Gigante"
+                    data-description="Aproveite uma vista incrível do parque em um passeio tranquilo.">
+
+                    <img src="img/roda.png"
+                        alt="Roda gigante iluminada"
+                        class="attraction-image">
+
+                    <div class="attraction-info">
+                        <h2>Roda Gigante</h2>
+                        <p class="category">Familiar</p>
+
+                        <span class="duration">
+                            ◷ 15 min
+                        </span>
+                    </div>
+
+                    <button class="details-btn" aria-label="Ver detalhes da Roda Gigante">
+                        ›
+                    </button>
+
+                </article>
+
+
+                <article class="attraction-card"
+                    data-category="infantil"
+                    data-name="Carrossel"
+                    data-description="Um passeio divertido e encantador para os pequenos.">
+
+                    <img src="img/carrossel.png"
+                        alt="Carrossel iluminado"
+                        class="attraction-image">
+
+                    <div class="attraction-info">
+                        <h2>Carrossel</h2>
+                        <p class="category">Infantil</p>
+
+                        <span class="duration">
+                            ◷ 8 min
+                        </span>
+                    </div>
+
+                    <button class="details-btn" aria-label="Ver detalhes do Carrossel">
+                        ›
+                    </button>
+
+                </article>
+
+
+                <article class="attraction-card"
+                    data-category="familiar"
+                    data-name="Carrinho bate-bate"
+                    data-description="Divirta-se com amigos e família nessa atração cheia de diversão.">
+
+                    <img src="img/bate_bate.png"
+                        alt="Carrinhos bate-bate"
+                        class="attraction-image">
+
+                    <div class="attraction-info">
+                        <h2>Carrinho bate-bate</h2>
+                        <p class="category">Familiar</p>
+
+                        <span class="duration">
+                            ◷ 8 min
+                        </span>
+                    </div>
+
+                    <button class="details-btn" aria-label="Ver detalhes do Carrinho bate-bate">
+                        ›
+                    </button>
+
+                </article>
+
+            </section>
+
+            <p id="emptyMessage" class="empty-message" hidden>
+                Nenhuma atração encontrada nesta categoria.
+            </p>
+
+        </section>
+
+
+        <!-- MENU INFERIOR -->
+        <footer class="bottom-menu">
+
+            <a href="javascript:history.back()" class="menu-item">
+                <span class="menu-icon">←</span>
+                <span>Voltar</span>
+            </a>
+
+            <a href="inicio.html" class="menu-item">
+                <span class="menu-icon">⌂</span>
+                <span>Início</span>
+            </a>
+
+            <a href="perfil.html" class="menu-item">
+                <span class="menu-icon">♙</span>
+                <span>Perfil</span>
+            </a>
+
+        </footer>
+
+    </main>
+
+
+    <!-- JANELA DE DETALHES -->
+    <div class="modal" id="detailsModal" aria-hidden="true">
+        <div class="modal-content" role="dialog" aria-modal="true"
+            aria-labelledby="modalTitle">
+
+            <button class="close-modal" id="closeModal"
+                aria-label="Fechar">×</button>
+
+            <h2 id="modalTitle">Nome da atração</h2>
+
+            <p id="modalDescription"></p>
+
+            <button class="modal-button" id="confirmModal">
+                Entendi!
+            </button>
+
+        </div>
+    </div>
+
+
+    <script src="atracoes.js"></script>
+
+</body>
+</html>

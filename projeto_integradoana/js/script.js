@@ -1,60 +1,137 @@
 
-const telaLogin = document.getElementById("telaLogin");
-const telaCadastro = document.getElementById("telaCadastro");
+const form = document.getElementById("signupForm");
 
-// Abrir cadastro
-document.getElementById("linkCadastro").addEventListener("click", function(e) {
-    e.preventDefault();
-    telaLogin.hidden = true;
-    telaCadastro.hidden = false;
-});
+const successMessage = document.getElementById("successMessage");
 
-// Voltar para login
-document.getElementById("linkLogin").addEventListener("click", function(e) {
-    e.preventDefault();
-    telaCadastro.hidden = true;
-    telaLogin.hidden = false;
-});
+// FUNÇÃO PARA MOSTRAR ERROS
 
-// Mostrar ou esconder senha
-function mostrar(id) {
-    const campo = document.getElementById(id);
-    campo.type = campo.type === "password" ? "text" : "password";
+function showError(id, message) {
+    document.getElementById(id).textContent = message;
 }
 
-// Validar cadastro
-document.getElementById("formCadastro").addEventListener("submit", function(e) {
-    e.preventDefault();
+// MOSTRAR E ESCONDER SENHA
 
-    const nome = document.getElementById("nome").value.trim();
-    const senha = document.getElementById("senhaCadastro").value;
-    const confirmar = document.getElementById("confirmarSenha").value;
+document.querySelectorAll(".toggle-password").forEach(button => {
 
-    if (nome.length < 3) {
-        alert("Digite seu nome completo!");
-        return;
-    }
+    button.addEventListener("click", () => {
 
-    if (senha.length < 8) {
-        alert("A senha precisa ter pelo menos 8 caracteres!");
-        return;
-    }
+        const input = document.getElementById(
+            button.dataset.target
+        );
 
-    if (senha !== confirmar) {
-        alert("As senhas não são iguais!");
-        return;
-    }
+        const showing = input.type === "text";
 
-    if (!document.getElementById("aceitarTermos").checked) {
-        alert("Aceite os termos para continuar!");
-        return;
-    }
+        input.type = showing ? "password" : "text";
 
-    alert("Cadastro realizado com sucesso!");
+        button.textContent = showing ? "◉" : "◎";
+
+    });
+
 });
 
-// Login (validação visual básica)
-document.getElementById("formLogin").addEventListener("submit", function(e) {
-    e.preventDefault();
-    alert("Formulário de login preenchido!");
+// CADASTRO
+
+
+form.addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    successMessage.textContent = "";
+
+    // LIMPAR ERROS
+
+    [
+        "nameError",
+        "emailError",
+        "passwordError",
+        "confirmError"
+    ].forEach(id => showError(id, ""));
+
+    // PEGAR VALORES
+
+    const name = document.getElementById("name").value.trim();
+
+    const email = document.getElementById("email").value.trim();
+
+    const password = document.getElementById("password").value;
+
+    const confirmPassword = document.getElementById("confirmPassword").value;
+
+    let valid = true;
+
+    // VALIDAR NOME
+
+    if (name.length < 3) {
+
+        showError(
+            "nameError",
+            "Digite seu nome corretamente."
+        );
+
+        valid = false;
+    }
+
+    // VALIDAR E-MAIL
+
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+
+        showError(
+            "emailError",
+            "Digite um e-mail válido."
+        );
+
+        valid = false;
+    }
+
+    // VALIDAR SENHA
+
+    if (password.length < 6) {
+
+        showError(
+            "passwordError",
+            "A senha precisa ter pelo menos 6 caracteres."
+        );
+
+        valid = false;
+    }
+
+    // CONFIRMAR SENHA
+
+    if (!confirmPassword || confirmPassword !== password) {
+
+        showError(
+            "confirmError",
+            "As senhas não coincidem."
+        );
+
+        valid = false;
+    }
+
+    // VERIFICAR SE EXISTEM ERROS
+
+    if (!valid) {
+        return;
+    }
+
+    // CADASTRO VALIDADO
+
+    successMessage.textContent =
+        `Cadastro validado! Seja bem-vindo(a), ${name}.`;
+
+    form.reset();
+
+    document.querySelectorAll(".toggle-password").forEach(button => {
+        button.textContent = "◉";
+    });
+
+});
+
+// LINK DE LOGIN
+
+document.getElementById("loginLink").addEventListener("click", function(event) {
+
+    event.preventDefault();
+
+    alert("Redirecionar para a página de login!");
+
 });
