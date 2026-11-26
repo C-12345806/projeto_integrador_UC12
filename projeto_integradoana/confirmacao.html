@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamento Confirmado</title>
+    <link rel="stylesheet" href="css/style confirmacao.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Ícone de sucesso -->
+        <div class="sucesso-icone">
+            <div class="circulo">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+            </div>
+            <div class="raio raio-1"></div>
+            <div class="raio raio-2"></div>
+            <div class="raio raio-3"></div>
+            <div class="raio raio-4"></div>
+            <div class="raio raio-5"></div>
+            <div class="raio raio-6"></div>
+            <div class="raio raio-7"></div>
+            <div class="raio raio-8"></div>
+        </div>
+
+        <!-- Título -->
+        <h1 class="titulo">Agendamento confirmado</h1>
+        <p class="subtitulo">Você agendou sua visita na<br>Montanha Russa para ás 11:20</p>
+
+        <!-- Cartão de detalhes -->
+        <div class="cartao">
+            <img src="img/montanha-russa.png" alt="Montanha Russa" class="imagem-atracao">
+            <div class="info-atracao">
+                <h3 class="nome-atracao">Montanha Russa</h3>
+                <p class="horario">11:20 - 11:40</p>
+                <p class="data">📅 12/09</p>
+            </div>
+        </div>
+
+        <!-- Botões -->
+        <button class="btn principal" onclick="verAgendamentos()">Ver meus agendamentos</button>
+        <a href="#" class="link-voltar" onclick="voltarInicio(event)">Voltar para o início</a>
+    </div>
+
+    <script src="js/script confirmação.js"></script>
+</body>
+</html>

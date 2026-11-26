@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selecionar Horário</title>
+    <link rel="stylesheet" href="css/style montanha.css">
+</head>
+<body>
+
+<div class="container">
+    <main class="tela">
+
+        <h2 class="titulo">Selecionar Horário</h2>
+
+        <div class="passeio">
+            <img src="img/montanha-russa.png" alt="Montanha-russa">
+
+            <div class="nome-passeio">
+                Montanha Russa<br>
+                <span>Radical</span>
+            </div>
+        </div>
+
+        <div class="datas">
+            <button class="data ativa" onclick="selecionarData(this)">
+                Hoje<br>12/09
+            </button>
+
+            <button class="data" onclick="selecionarData(this)">
+                Amanhã<br>13/09
+            </button>
+
+            <button class="data" onclick="selecionarData(this)">
+                Sex<br>14/09
+            </button>
+        </div>
+
+        <h3 class="subtitulo">Horários disponíveis</h3>
+
+        <div class="horarios">
+            <button class="horario" onclick="selecionarHorario(this)">10:00</button>
+            <button class="horario" onclick="selecionarHorario(this)">10:20</button>
+            <button class="horario" onclick="selecionarHorario(this)">10:40</button>
+
+            <button class="horario" onclick="selecionarHorario(this)">11:00</button>
+            <button class="horario ativo" onclick="selecionarHorario(this)">11:20</button>
+            <button class="horario" onclick="selecionarHorario(this)">11:40</button>
+
+            <button class="horario" onclick="selecionarHorario(this)">12:00</button>
+            <button class="horario" onclick="selecionarHorario(this)">12:20</button>
+            <button class="horario" onclick="selecionarHorario(this)">12:40</button>
+        </div>
+
+        <div class="grupo">
+            <div class="icone-grupo">👥</div>
+
+            <div class="grupo-info">
+                <h3>Horário em grupo</h3>
+                <p>Das 12:20 até 12:40</p>
+                <small>(min. 10 pessoas)</small>
+            </div>
+        </div>
+
+       <button class="confirmar" onclick="window.location.assign('confirmacao.html')">
+         Confirmar Horário
+      </button>
+        <!-- MENU INFERIOR SEM BOTÃO VOLTAR -->
+        <nav class="menu">
+
+            <button class="menu-item" onclick="inicio()">
+                <svg viewBox="0 0 32 32">
+                    <path d="M3 14L16 4L29 14"/>
+                    <path d="M7 12V28H25V12"/>
+                    <path d="M13 28V19H19V28"/>
+                </svg>
+                Início
+            </button>
+
+            <button class="menu-item" onclick="perfil()">
+                <svg viewBox="0 0 32 32">
+                    <circle cx="16" cy="9" r="7"/>
+                    <path d="M4 28V25C4 18 9 16 16 16C23 16 28 18 28 25V28Z"/>
+                </svg>
+                Perfil
+            </button>
+
+        </nav>
+
+    </main>
+</div>
+
+<script src="js/script montanha.js"></script>
+</body>
+</html>
